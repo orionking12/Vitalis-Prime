@@ -1,5 +1,10 @@
-![Banner Vitalis](vitalis_banner.png)
+<div align="center">
 
+<img src="./vitalis_banner.png" alt="Vitalis-Prime v1.0 Logo" width="100%">
+
+# VITALIS-PRIME: The Convergent Intelligence Kernel (v1.0)
+
+</div>
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)](https://pytorch.org/)
