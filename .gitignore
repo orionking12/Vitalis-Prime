@@ -1,0 +1,22 @@
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos Virtuales y Variables de Entorno
+venv/
+env/
+.env
+
+# Archivos de Modelos de Machine Learning (PyTorch / Scikit-learn)
+*.pt
+*.pth
+*.pkl
+
+# Archivos del Sistema Operativo
+.DS_Store
+Thumbs.db
+
+# Logs y bases de datos locales
+*.log
+*.sqlite3
