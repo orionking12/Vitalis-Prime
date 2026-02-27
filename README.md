@@ -86,6 +86,45 @@ Este proyecto es una arquitectura original desarrollada por **Jorge Humberto Dav
 * **Ubicación:** Guadalajara, Jalisco, México
 * **Licencia:** MIT License
 
+* 🚀 Instalación y Setup
+Para desplegar el núcleo de Vitalis-Prime en tu entorno local o servidor, sigue estos pasos optimizados para Python 3.12:
+
+# 1. Clonar el repositorio del Kernel
+git clone https://github.com/tu-usuario/Vitalis-Prime.git
+cd Vitalis-Prime
+
+# 2. Crear entorno virtual especializado
+python -m venv venv
+source venv/bin/activate  # En Windows: venv\Scripts\activate
+
+# 3. Instalar dependencias base (PyTorch + Flask)
+pip install -r requirements.txt
+
+🛠️ Uso del Framework
+El sistema está diseñado para ser modular. Puedes inicializar el motor de convergencia con el siguiente fragmento de código:
+
+from vitalis_kernel import ConvergentEngine
+
+# Inicializar motor diseñado por Jorge Humberto Davalos Gonzalez
+engine = ConvergentEngine(mode="evolutionary", location="Guadalajara")
+
+# Ejecutar simulación de supervivencia ante Concept Drift
+engine.run_simulation(input_data="sensor_stream_01")
+
+📑 Certificación y Propiedad Intelectual
+Este software y su arquitectura de Gemelo Digital Evolutivo están protegidos bajo el marco de propiedad intelectual de su autor:
+
+Arquitecto Jefe: Jorge Humberto Davalos Gonzalez.
+
+Entidad Legal: CEO y Fundador de ORZWORKNET Foundation.
+
+Sede de Desarrollo: Tlaquepaque / Guadalajara, Jalisco, México.
+
+Fecha de Registro de Agentes: Enero de 2026.
+
+Vitalis-Prime representa la evolución de los sistemas estáticos hacia una inteligencia que no solo procesa datos, sino que sobrevive a ellos.
+
+
 ## 🚀 Ecosistema de Componentes
 
 El repositorio se divide en tres microservicios concurrentes:
@@ -108,7 +147,6 @@ El repositorio se divide en tres microservicios concurrentes:
 
 
 ---
-
 ## 🛠️ Instalación y Despliegue
 
 ### Opción 1: Despliegue en la Nube (Docker)
