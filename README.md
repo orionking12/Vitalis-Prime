@@ -1,17 +1,25 @@
 <div align="center">
+  <img src="./Vitalis_Banner.png" alt="Vitalis-Prime v1.0 Logo" width="100%">
 
-<img src="./Vitalis_Banner.png" alt="Vitalis-Prime v1.0 Logo" width="100%">
+  <h1>VITALIS-PRIME: The Convergent Intelligence Kernel (v1.0)</h1>
 
-# VITALIS-PRIME: The Convergent Intelligence Kernel (v1.0)
-
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT">
+  </a>
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/python-3.12-blue.svg" alt="Python 3.12">
+  </a>
+  <a href="https://pytorch.org/">
+    <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white" alt="PyTorch">
+  </a>
+  <a href="https://flask.palletsprojects.com/">
+    <img src="https://img.shields.io/badge/flask-%23000.svg?logo=flask&logoColor=white" alt="Flask">
+  </a>
 </div>
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)](https://pytorch.org/)
-[![Flask](https://img.shields.io/badge/flask-%23000.svg?logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+
+<br>
 
 **Vitalis-Prime** es un motor de inteligencia neuro-híbrida y un framework de Gemelo Digital Evolutivo. Está diseñado matemáticamente para sobrevivir a colapsos en simulaciones físicas y adaptarse a derivas de concepto (*Concept Drift*) masivas en tiempo real, superando las limitaciones de los ensamblados de Machine Learning estáticos.
-
 ---
 
 ## 🧠 Arquitectura Central: Sincronizador Neuro-Híbrido
