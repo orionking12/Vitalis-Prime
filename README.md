@@ -136,53 +136,64 @@ El repositorio se divide en tres microservicios concurrentes:
 3. **El Sistema Nervioso (`enjambre_adversario.py`)**: 
    Un cliente de pruebas de estrés asíncrono (*Adversarial Swarm*) que inyecta ruido y altera deliberadamente las "leyes de la física" de la simulación para probar la antifragilidad del núcleo.
 
----
+🏗️ 1. Aplicaciones comerciales por industria
 
-## 📑 Tabla de Contenidos
-* [Descripción General](#vitalis-prime-es-un-motor-de-inteligencia-neuro-híbrida)
-* [Arquitectura Neuro-Híbrida](#-arquitectura-neuro-híbrida)
-* [Instalación](#-instalación)
-* [Uso del Framework](#-uso-del-framework)
-* [Licencia y Autoría](#-licencia-y-autoría)
+A. Energía y Plantas Industriales (Mantenimiento predictivo)
 
+Uso: Monitoreo de turbinas, calderas o reactores donde las condiciones térmicas pueden cambiar drásticamente.
 
----
-## 🛠️ Instalación y Despliegue
+Valor: Vitalis detecta si una anomalía es un fallo real o simplemente un cambio en el entorno (ej., cambio de estación o de combustible), evitando paradas de planta innecesarias que cuestan millones.
 
-### Opción 1: Despliegue en la Nube (Docker)
-El proyecto incluye un `Dockerfile` multi-stage optimizado para plataformas como Render, Railway o AWS.
-```bash
-docker build -t vitalis-prime:v1.0 .
-docker run -p 5000:5000 -p 8050:8050 vitalis-prime:v1.0
+B. Fintech y mercados volátiles
 
-# 1. Clonar el repositorio
-git clone [https://github.com/TU_USUARIO/NOMBRE_REPO.git](https://github.com/TU_USUARIO/NOMBRE_REPO.git)
-cd NOMBRE_REPO
+Uso: Detección de fraude y análisis de riesgo en tiempo real.
 
-# 2. Instalar dependencias
-pip install -r requirements.txt
+Valor: Los mercados financieros cambian sus reglas constantemente. Vitalis utiliza su "Amnesia Estructurada" para dejar de seguir patrones viejos y adaptarse a la nueva volatilidad del mercado en segundos.
 
-# 3. Iniciar el servidor con Gunicorn (4 workers)
-./run_prod.sh
+C. Computación cuántica y semiconductores
 
-🔬 Modo de Uso (Prueba de Estrés)
-Para observar el ecosistema completo operando bajo estrés extremo, ejecuta en tres terminales independientes:
+Uso: Estabilización de sistemas complejos y control de calidad en nanotecnología.
 
-Inicia el Núcleo (API): python servidor_nucleo.py
+Valor: En sistemas donde el ruido cuántico es la norma, la capacidad de Vitalis para arbitrar entre modelos estadísticos y neuronales permite mantener la coherencia de los datos.
 
-Inicia el Holoscopio: python holoscopio_visual.py (Abre http://127.0.0.1:8050)
+D. Smart Cities e Infraestructura Crítica
 
-Lanza el Enjambre: python enjambre_adversario.py
+Uso: Gestión inteligente de redes eléctricas y tráfico urbano.
 
-Observa el navegador: En la ronda 7, el Enjambre invertirá las leyes físicas. Verás el océano de pérdida agitarse y a la Red Neuronal arrancar la atención gravitacional del Random Forest para salvar el sistema.
+Valor: El "Failsafe Analógico" asegura que, si la red de sensores es atacada o falla la IA, el sistema caiga en reglas de seguridad básicas que mantengan los semáforos o la luz funcionando.
 
-👤 Autor y Contacto Comercial
-Jorge Humberto Davalos Gonzalez Arquitecto Tecnológico y Creador
+⚙️ 2. Funciones clave del sistema
 
-Email: luckystrike@gmail.com
+1. Arbitraje Cognitivo Dinámico (Módulo de Atención)
 
-Ubicación: Tlaquepaque / Guadalajara, Jalisco, México.
+Qué hace: Decide en milisegundos si confiar en la estadística sólida (Random Forest) o en la intuición profunda (Red Neuronal).
 
-Para consultas sobre licencias comerciales, escalabilidad en entornos de Industria 4.0, implementaciones empresariales, integración Web3 o colaboraciones directas relacionadas con el núcleo VITALIS-PRIME o cualquier arquitectura derivada, por favor contactar directamente a través del correo electrónico proporcionado.
+Beneficio comercial: Optimiza el uso de CPU/GPU, activando la potencia total solo cuando el escenario es realmente complejo.
 
-Licencia: Distribuido bajo licencia MIT. Ver archivo LICENSE para más detalles.
+2. Observabilidad de resonancia (holoscopio 3D)
+
+Qué hace: Visualiza el "estrés" del sistema en una interfaz tridimensional.
+
+Beneficio comercial: Permite a los gerentes de planta o auditores de seguridad "ver" la salud del sistema sin ser expertos en código, facilitando la toma de decisiones humana.
+
+3. Autocuración y Defensa Activa (Weight Reset)
+
+Qué hace: Reinicia sus propios parámetros si detecta que ha sido "envenenado" o engañado por datos falsos.
+
+Beneficio comercial: Garantiza la seguridad informática (ciberseguridad) y la integridad del gemelo digital contra ataques adversarios.
+
+4. Adaptación al "concept drift"
+
+Qué hace: Identifica cuando las reglas del juego han cambiado y entrena nuevos modelos en caliente.
+
+Beneficio comercial: Reduce el costo de mantenimiento de software, ya que el sistema no requiere que un ingeniero lo recalibre manualmente cada vez que el entorno cambia.
+
+"""
+PROJECT: Vitalis-Prime (The Convergent Intelligence Kernel)
+VERSION: 1.0.0
+AUTHOR: Jorge Humberto Davalos Gonzalez
+EMAIL: luckystrike@gmail.com
+LOCATION: Guadalajara, Jalisco, Mexico
+ORGANIZATION: CEO and Founder of ORZWORKNET Foundation
+INTELLECTUAL PROPERTY: Licensed under MIT (2026)
+"""
