@@ -124,76 +124,35 @@ Fecha de Registro de Agentes: Enero de 2026.
 
 Vitalis-Prime representa la evolución de los sistemas estáticos hacia una inteligencia que no solo procesa datos, sino que sobrevive a ellos.
 
+## Ecosistema de Componentes
 
-## 🚀 Ecosistema de Componentes
+Este repositorio comprende tres microservicios concurrentes:
 
-El repositorio se divide en tres microservicios concurrentes:
+1.  **El Cerebro (`servidor_nucleo.py`):** Un servidor Flask asíncrono que ingiere telemetría mediante micro-lotes. Emplea Amnesia Estructurada (ventanas móviles) para reentrenar modelos clásicos sin interrumpir la ingestión de datos.
+2.  **Los Ojos (`holoscopio_visual.py`):** Un Holoscopio de Resonancia Cognitiva construido con Dash/Plotly 3D. Visualiza la tensión atencional entre modelos como fuerzas gravitacionales y el error del sistema como un "Océano de Pérdida" topográfico.
+3.  **El Sistema Nervioso (`enjambre_adversario.py`):** Un cliente asíncrono de prueba de estrés (Enjambre Adversario) que inyecta ruido y altera deliberadamente la física de la simulación para probar la antifragilidad del kernel.
 
-1. **El Cerebro (`servidor_nucleo.py`)**: 
-   Servidor asíncrono en Flask que ingiere telemetría mediante micro-batching. Aplica *Amnesia Estructurada* (ventanas móviles) para reentrenar sus modelos clásicos sin detener la ingesta de datos.
-2. **Los Ojos (`holoscopio_visual.py`)**: 
-   Un Holoscopio de Resonancia Cognitiva construido en Dash/Plotly 3D. No grafica simples líneas; renderiza la tensión atencional entre los modelos como fuerzas gravitacionales y visualiza el error del sistema como un "Océano de Pérdida" topográfico.
-3. **El Sistema Nervioso (`enjambre_adversario.py`)**: 
-   Un cliente de pruebas de estrés asíncrono (*Adversarial Swarm*) que inyecta ruido y altera deliberadamente las "leyes de la física" de la simulación para probar la antifragilidad del núcleo.
+**Aplicaciones Comerciales:**
 
-🏗️ 1. Aplicaciones comerciales por industria
+A. **Energía y Plantas Industriales (Mantenimiento Predictivo):** Monitorea turbinas, calderas o reactores, detectando anomalías (fallas reales vs. cambios ambientales) para prevenir paradas innecesarias de la planta.
 
-A. Energía y Plantas Industriales (Mantenimiento predictivo)
+B. **Fintech y Mercados Volátiles:** Permite la detección de fraude y el análisis de riesgos en tiempo real. La Amnesia Estructurada facilita la rápida adaptación a la volatilidad del mercado descartando patrones obsoletos.
 
-Uso: Monitoreo de turbinas, calderas o reactores donde las condiciones térmicas pueden cambiar drásticamente.
+C. **Computación Cuántica y Semiconductores:** Estabiliza sistemas complejos y controla la calidad en nanotecnología. El arbitraje entre modelos estadísticos y neuronales mantiene la coherencia de los datos en entornos cuánticos ruidosos.
 
-Valor: Vitalis detecta si una anomalía es un fallo real o simplemente un cambio en el entorno (ej., cambio de estación o de combustible), evitando paradas de planta innecesarias que cuestan millones.
+D. **Ciudades Inteligentes e Infraestructura Crítica:** Proporciona una gestión inteligente de las redes eléctricas y el tráfico urbano. El Failsafe Analógico asegura la continuidad del servicio básico (semáforos, iluminación) mediante reglas de seguridad predefinidas en caso de ataques o fallas de la IA.
 
-B. Fintech y mercados volátiles
+**Funciones Clave del Sistema:**
 
-Uso: Detección de fraude y análisis de riesgo en tiempo real.
+1.  **Arbitraje Cognitivo Dinámico (Módulo de Atención):** Decide instantáneamente entre la estadística (Random Forest) y la intuición (Red Neuronal). Beneficio: Optimiza el uso de CPU/GPU, aplicando la máxima potencia solo en escenarios complejos.
+2.  **Observabilidad de Resonancia (Holoscopio 3D):** Visualiza el "estrés" del sistema en una interfaz 3D. Beneficio: Permite a los ejecutivos y auditores evaluar la salud del sistema sin experiencia técnica, facilitando la toma de decisiones.
+3.  **Autocuración y Defensa Activa (Restablecimiento de Pesos):** Restablece los parámetros al detectar datos falsos o manipulación. Beneficio: Asegura la ciberseguridad y la integridad del gemelo digital contra ataques.
+4.  **Adaptación al Desplazamiento de Concepto:** Identifica cambios en las reglas ambientales y entrena automáticamente nuevos modelos. Beneficio: Reduce los costos de mantenimiento al eliminar la recalibración manual del software.
 
-Valor: Los mercados financieros cambian sus reglas constantemente. Vitalis utiliza su "Amnesia Estructurada" para dejar de seguir patrones viejos y adaptarse a la nueva volatilidad del mercado en segundos.
-
-C. Computación cuántica y semiconductores
-
-Uso: Estabilización de sistemas complejos y control de calidad en nanotecnología.
-
-Valor: En sistemas donde el ruido cuántico es la norma, la capacidad de Vitalis para arbitrar entre modelos estadísticos y neuronales permite mantener la coherencia de los datos.
-
-D. Smart Cities e Infraestructura Crítica
-
-Uso: Gestión inteligente de redes eléctricas y tráfico urbano.
-
-Valor: El "Failsafe Analógico" asegura que, si la red de sensores es atacada o falla la IA, el sistema caiga en reglas de seguridad básicas que mantengan los semáforos o la luz funcionando.
-
-⚙️ 2. Funciones clave del sistema
-
-1. Arbitraje Cognitivo Dinámico (Módulo de Atención)
-
-Qué hace: Decide en milisegundos si confiar en la estadística sólida (Random Forest) o en la intuición profunda (Red Neuronal).
-
-Beneficio comercial: Optimiza el uso de CPU/GPU, activando la potencia total solo cuando el escenario es realmente complejo.
-
-2. Observabilidad de resonancia (holoscopio 3D)
-
-Qué hace: Visualiza el "estrés" del sistema en una interfaz tridimensional.
-
-Beneficio comercial: Permite a los gerentes de planta o auditores de seguridad "ver" la salud del sistema sin ser expertos en código, facilitando la toma de decisiones humana.
-
-3. Autocuración y Defensa Activa (Weight Reset)
-
-Qué hace: Reinicia sus propios parámetros si detecta que ha sido "envenenado" o engañado por datos falsos.
-
-Beneficio comercial: Garantiza la seguridad informática (ciberseguridad) y la integridad del gemelo digital contra ataques adversarios.
-
-4. Adaptación al "concept drift"
-
-Qué hace: Identifica cuando las reglas del juego han cambiado y entrena nuevos modelos en caliente.
-
-Beneficio comercial: Reduce el costo de mantenimiento de software, ya que el sistema no requiere que un ingeniero lo recalibre manualmente cada vez que el entorno cambia.
-
-"""
-PROJECT: Vitalis-Prime (The Convergent Intelligence Kernel)
-VERSION: 1.0.0
-AUTHOR: Jorge Humberto Davalos Gonzalez
-EMAIL: luckystrike@gmail.com
-LOCATION: Guadalajara, Jalisco, Mexico
-ORGANIZATION: CEO and Founder of ORZWORKNET Foundation
-INTELLECTUAL PROPERTY: Licensed under MIT (2026)
-"""
+PROYECTO: Vitalis-Prime (El Kernel de Inteligencia Convergente)
+VERSIÓN: 1.0.0
+AUTOR: Jorge Humberto Davalos Gonzalez
+CORREO ELECTRÓNICO: luckystrike@gmail.com
+UBICACIÓN: Guadalajara, Jalisco, México
+ORGANIZACIÓN: CEO y Fundador de ORZWORKNET Foundation
+PROPIEDAD INTELECTUAL: Licenciado bajo MIT (2026)
