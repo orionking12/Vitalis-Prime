@@ -79,12 +79,13 @@ El **Convergent Intelligence Kernel** de Vitalis-Prime opera bajo una estructura
 
 ## 📜 Licencia y Autoría
 
-Este proyecto es una arquitectura original desarrollada por **Jorge Humberto Davalos Gonzalez**.
+Este proyecto es una arquitectura original desarrollada por **Jorge H. Dávalos González **. (orion-vox-114)
 
 * **Autor:** Jorge Humberto Davalos Gonzalez
 * **Organización:** ORZWORKNET Foundation
 * **Ubicación:** Guadalajara, Jalisco, México
 * **Licencia:** MIT License
+* luckystrike1250@gmail.com
 
 * 🚀 Instalación y Setup
 Para desplegar el núcleo de Vitalis-Prime en tu entorno local o servidor, sigue estos pasos optimizados para Python 3.12:
