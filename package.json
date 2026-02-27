@@ -1,0 +1,16 @@
+{
+  "name": "vitalis-prime-kernel",
+  "version": "1.0.0",
+  "description": "The Convergent Intelligence Kernel - Architecture by Jorge Humberto Davalos Gonzalez",
+  "main": "src/network/socket.js",
+  "scripts": {
+    "start": "node src/network/socket.js",
+    "dev": "nodemon src/network/socket.js"
+  },
+  "author": "Jorge Humberto Davalos Gonzalez (CEO ORZWORKNET Foundation)",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "^4.7.0",
+    "dotenv": "^16.3.1"
+  }
+}
