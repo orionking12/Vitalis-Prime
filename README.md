@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./vitalis_banner.png" alt="Vitalis-Prime v1.0 Logo" width="100%">
+<img src="./Vitalis_Banner.png" alt="Vitalis-Prime v1.0 Logo" width="100%">
 
 # VITALIS-PRIME: The Convergent Intelligence Kernel (v1.0)
 
