@@ -5,6 +5,7 @@
 # VITALIS-PRIME: The Convergent Intelligence Kernel (v1.0)
 
 </div>
+
 # 🌌 SUITE-VITALIS-PRIME: The Convergent Intelligence Kernel (v1.0)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
