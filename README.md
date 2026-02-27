@@ -145,8 +145,11 @@ D. **Ciudades Inteligentes e Infraestructura Crítica:** Proporciona una gestió
 **Funciones Clave del Sistema:**
 
 1.  **Arbitraje Cognitivo Dinámico (Módulo de Atención):** Decide instantáneamente entre la estadística (Random Forest) y la intuición (Red Neuronal). Beneficio: Optimiza el uso de CPU/GPU, aplicando la máxima potencia solo en escenarios complejos.
+
 2.  **Observabilidad de Resonancia (Holoscopio 3D):** Visualiza el "estrés" del sistema en una interfaz 3D. Beneficio: Permite a los ejecutivos y auditores evaluar la salud del sistema sin experiencia técnica, facilitando la toma de decisiones.
+
 3.  **Autocuración y Defensa Activa (Restablecimiento de Pesos):** Restablece los parámetros al detectar datos falsos o manipulación. Beneficio: Asegura la ciberseguridad y la integridad del gemelo digital contra ataques.
+
 4.  **Adaptación al Desplazamiento de Concepto:** Identifica cambios en las reglas ambientales y entrena automáticamente nuevos modelos. Beneficio: Reduce los costos de mantenimiento al eliminar la recalibración manual del software.
 
 PROYECTO: Vitalis-Prime (El Kernel de Inteligencia Convergente)
