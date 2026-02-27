@@ -22,7 +22,43 @@
 **Vitalis-Prime** es un motor de inteligencia neuro-híbrida y un framework de Gemelo Digital Evolutivo. Está diseñado matemáticamente para sobrevivir a colapsos en simulaciones físicas y adaptarse a derivas de concepto (*Concept Drift*) masivas en tiempo real, superando las limitaciones de los ensamblados de Machine Learning estáticos.
 ---
 
-## 🧠 Arquitectura Central: Sincronizador Neuro-Híbrido
+---
+
+## 📑 Tabla de Contenidos
+* [Descripción General](#vitalis-prime-es-un-motor-de-inteligencia-neuro-híbrida)
+* [Arquitectura Neuro-Híbrida](#-arquitectura-neuro-híbrida)
+* [Instalación](#-instalación)
+* [Uso del Framework](#-uso-del-framework)
+* [Licencia y Autoría](#-licencia-y-autoría)
+
+---
+
+## 🧠 Arquitectura Neuro-Híbrida
+
+El **Convergent Intelligence Kernel** de Vitalis-Prime opera bajo una estructura de tres capas de procesamiento dinámico, diseñada específicamente en Jalisco, México, para la evolución digital:
+
+### 1. Percepción de Deriva (Concept Drift Layer)
+* Monitoreo constante de variables en tiempo real para detectar cambios en el entorno de la simulación.
+* Adaptación matemática inmediata para evitar la degradación de los modelos predictivos.
+
+### 2. Núcleo de Convergencia (The Kernel)
+* Motor de procesamiento híbrido que combina lógica simbólica con redes neuronales profundas (Deep Learning).
+* Optimizado para PyTorch y ejecución en entornos de alto rendimiento.
+
+### 3. Gemelo Digital Evolutivo (Digital Twin Hub)
+* Generación de réplicas digitales que aprenden y evolucionan en paralelo a los activos físicos.
+* Capacidad de autocuración ante colapsos en simulaciones físicas complejas.
+
+---
+
+## 📜 Licencia y Autoría
+
+Este proyecto es una arquitectura original desarrollada por **Jorge Humberto Davalos Gonzalez**.
+
+* **Autor:** Jorge Humberto Davalos Gonzalez
+* **Organización:** ORZWORKNET Foundation
+* **Ubicación:** Guadalajara, Jalisco, México
+* **Licencia:** MIT License
 
 A diferencia de los sistemas tradicionales que promedian predicciones, Vitalis-Prime utiliza un **Módulo de Atención Dinámica** que debate internamente en tiempo real. 
 
@@ -60,6 +96,16 @@ El repositorio se divide en tres microservicios concurrentes:
    Un Holoscopio de Resonancia Cognitiva construido en Dash/Plotly 3D. No grafica simples líneas; renderiza la tensión atencional entre los modelos como fuerzas gravitacionales y visualiza el error del sistema como un "Océano de Pérdida" topográfico.
 3. **El Sistema Nervioso (`enjambre_adversario.py`)**: 
    Un cliente de pruebas de estrés asíncrono (*Adversarial Swarm*) que inyecta ruido y altera deliberadamente las "leyes de la física" de la simulación para probar la antifragilidad del núcleo.
+
+---
+
+## 📑 Tabla de Contenidos
+* [Descripción General](#vitalis-prime-es-un-motor-de-inteligencia-neuro-híbrida)
+* [Arquitectura Neuro-Híbrida](#-arquitectura-neuro-híbrida)
+* [Instalación](#-instalación)
+* [Uso del Framework](#-uso-del-framework)
+* [Licencia y Autoría](#-licencia-y-autoría)
+
 
 ---
 
