@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./Vitalis_Banner.png" alt="Vitalis-Prime v2.0 Logo" width="100%">
 
-  <h1>VITALIS-PRIME: The Convergent Intelligence Kernel (v2.0 PRO)</h1>
+  <h1>MERAKI SMILE DENTAL: Convergent Ecosystem (Powered by Vitalis-Prime)</h1>
 
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT">
@@ -19,16 +19,17 @@
 
 <br>
 
-**Vitalis-Prime** is a neuro-hybrid intelligence engine and Evolutionary Digital Twin framework. Designed by **Jorge H. Davalos Gonzalez**, it survives physics simulation collapses and massive real-time Concept Drift.
+**Meraki Smile Dental** is a comprehensive dental ecosystem designed for the Mexican market. It is powered by the **Vitalis-Prime** neuro-hybrid intelligence engine and Evolutionary Digital Twin framework, created by **Jorge H. Davalos Gonzalez**.
 
 ---
 
-## 🏗️ Architecture (v2.0 PRO)
+## 🏗️ Meraki Smile Ecosystem Architecture
 
-- **The Brain (`src/kernel/`):** A Flask-driven hybrid synchronizer combining Random Forest (Memory) and PyTorch (Intuition) via a Dynamic Attention Module.
+- **Meraki Platform Core:** Manages subscriptions, customizable widgets, and patient payment systems tailored for Mexican dental clinics.
+- **Vitalis-Prime Brain (`src/kernel/`):** The underlying intelligence engine. A Flask-driven hybrid synchronizer combining Random Forest (Memory) and PyTorch (Intuition) via a Dynamic Attention Module.
+- **Home Service Matchmaker:** Connects dentists with on-demand home service requests across the web using predictive intelligence.
 - **The Nervous System (`app.js`):** A Node.js bridge with auto-healing and real-time socket communication.
-- **The Eyes (`src/visualization/`):** A 3D Cognitive Resonance Holoscope using Dash/Plotly.
-- **The Adversary (`src/stress_test/`):** An asynchronous swarm to stress-test system anti-fragility.
+- **The Eyes (`src/visualization/`):** A 3D Cognitive Resonance Holoscope using Dash/Plotly for real-time demand visualization.
 
 ---
 

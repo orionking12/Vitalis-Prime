@@ -16,6 +16,14 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import StandardScaler
 from dotenv import load_dotenv
 
+# Meraki Platform Modules
+# Using relative imports or adjusting sys.path carefully
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from meraki_platform.subscription_manager import meraki_sub_manager
+from meraki_platform.payment_manager import meraki_payment_manager
+from meraki_platform.community_module import meraki_community
+from meraki_platform.home_service_engine import meraki_home_service
+
 # Load environment variables
 load_dotenv()
 
@@ -140,6 +148,94 @@ class VitalisKernelApp:
                 },
                 'classical_memory_size': len(self.mem_x)
             })
+
+        # --- Meraki Platform Endpoints ---
+
+        @self.app.route('/api/v1/meraki/dentist/register', methods=['POST'])
+        def meraki_register():
+            data = request.get_json()
+            d_id = data.get('dentist_id')
+            email = data.get('email')
+            if not d_id or not email:
+                return jsonify({'status': 'error', 'message': 'Missing data'}), 400
+
+            sub = meraki_sub_manager.register_dentist(d_id, email)
+            return jsonify({'status': 'registered', 'subscription': sub}), 201
+
+        @self.app.route('/api/v1/meraki/dentist/widgets', methods=['PUT'])
+        def meraki_widgets():
+            data = request.get_json()
+            d_id = data.get('dentist_id')
+            widgets = data.get('widgets', [])
+
+            if not d_id or not meraki_sub_manager.check_access(d_id):
+                return jsonify({'status': 'error', 'message': 'Access denied or missing ID'}), 403
+
+            if meraki_sub_manager.update_widgets(d_id, widgets):
+                return jsonify({'status': 'updated', 'widgets': widgets}), 200
+            return jsonify({'status': 'error', 'message': 'Dentist not found'}), 404
+
+        @self.app.route('/api/v1/meraki/patient/payment', methods=['POST'])
+        def meraki_payment():
+            data = request.get_json()
+            d_id = data.get('dentist_id')
+            p_name = data.get('patient_name')
+            amount = data.get('amount')
+            method = data.get('method', 'CASH')
+
+            if not d_id or not meraki_sub_manager.check_access(d_id):
+                return jsonify({'status': 'error', 'message': 'Access denied or missing ID'}), 403
+
+            payment = meraki_payment_manager.add_patient_payment(d_id, p_name, amount, method)
+            return jsonify({'status': 'payment_recorded', 'payment': payment}), 201
+
+        @self.app.route('/api/v1/meraki/patient/ledger', methods=['GET'])
+        def meraki_ledger():
+            d_id = request.args.get('dentist_id')
+            if not d_id or not meraki_sub_manager.check_access(d_id):
+                return jsonify({'status': 'error', 'message': 'Access denied or missing ID'}), 403
+
+            ledger = meraki_payment_manager.get_dentist_ledger(d_id)
+            return jsonify({'status': 'success', 'ledger': ledger}), 200
+
+        @self.app.route('/api/v1/meraki/community/post', methods=['POST'])
+        def meraki_post():
+            data = request.get_json()
+            d_id = data.get('dentist_id')
+            title = data.get('title')
+            content = data.get('content')
+
+            if not d_id or not meraki_sub_manager.check_access(d_id):
+                return jsonify({'status': 'error', 'message': 'Access denied or missing ID'}), 403
+
+            post = meraki_community.post_marketing(d_id, content, title)
+            return jsonify({'status': 'posted', 'post': post}), 201
+
+        @self.app.route('/api/v1/meraki/community/feed', methods=['GET'])
+        def meraki_feed():
+            return jsonify({'status': 'success', 'feed': meraki_community.get_community_feed()}), 200
+
+        @self.app.route('/api/v1/meraki/home_service/find', methods=['GET'])
+        def meraki_home_find():
+            d_id = request.args.get('dentist_id')
+            if not d_id or not meraki_sub_manager.check_access(d_id):
+                return jsonify({'status': 'error', 'message': 'Access denied or missing ID'}), 403
+
+            matches = meraki_home_service.find_matches(d_id)
+            return jsonify({'status': 'success', 'matches': matches}), 200
+
+        @self.app.route('/api/v1/meraki/home_service/offer', methods=['POST'])
+        def meraki_home_offer():
+            data = request.get_json()
+            d_id = data.get('dentist_id')
+            r_id = data.get('request_id')
+
+            if not d_id or not meraki_sub_manager.check_access(d_id):
+                return jsonify({'status': 'error', 'message': 'Access denied or missing ID'}), 403
+
+            if meraki_home_service.offer_service(d_id, r_id):
+                return jsonify({'status': 'offered', 'request_id': r_id}), 200
+            return jsonify({'status': 'error', 'message': 'Service not found'}), 404
 
     def _worker_loop(self):
         logger.info("Kernel Synchronizer Worker active.")
