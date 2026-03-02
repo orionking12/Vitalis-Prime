@@ -8,44 +8,60 @@
 
 require('dotenv').config();
 const { spawn } = require('child_process');
+const path = require('path');
 const io = require('./src/network/socket');
 
+const AUTHOR = process.env.AUTHOR_NAME || "Jorge Humberto Davalos Gonzalez";
+const PORT = process.env.PORT || 3001;
+
 console.log(`
-  VITALIS-PRIME KERNEL v1.0
-  -------------------------
-  Autor: Jorge Humberto Davalos Gonzalez
+  VITALIS-PRIME KERNEL v2.0 (PRO)
+  ------------------------------
+  Autor: ${AUTHOR}
   Status: Initializing Convergent Intelligence...
 `);
 
-/**
- * 1. Inicializar el Motor de Inteligencia Neuro-Híbrida (Python)
- * Este proceso arranca el Kernel que gestiona el Concept Drift.
- */
-const pythonKernel = spawn('python', ['src/vitalis_kernel.py']);
+let pythonKernel;
 
-pythonKernel.stdout.on('data', (data) => {
-    console.log(`[PYTHON_KERNEL]: ${data}`);
-    // Si el Kernel detecta un colapso, lo enviamos al Dashboard vía Sockets
-    if (data.includes("CRITICAL_DRIFT")) {
-        io.emit('ORION_CORE_ALERT', {
-            action: "Emergency Self-Healing Protocol",
-            intensity: 0.95,
-            verified_by: process.env.AUTHOR_NAME
-        });
-    }
+function startKernel() {
+    console.log(`[BRIDGE] Starting Python Kernel: src/kernel/servidor_nucleo.py`);
+
+    pythonKernel = spawn('python', [path.join(__dirname, 'src/kernel/servidor_nucleo.py')]);
+
+    pythonKernel.stdout.on('data', (data) => {
+        const output = data.toString().trim();
+        console.log(`[PYTHON_KERNEL]: ${output}`);
+
+        // Critical Drift Detection
+        if (output.includes("CRITICAL_DRIFT")) {
+            console.warn(`[BRIDGE] !!! CRITICAL DRIFT ALERT !!!`);
+            io.emit('ORION_CORE_ALERT', {
+                action: "Emergency Self-Healing Protocol",
+                intensity: 0.95,
+                verified_by: AUTHOR,
+                timestamp: new Date().toISOString()
+            });
+        }
+    });
+
+    pythonKernel.stderr.on('data', (data) => {
+        console.error(`[KERNEL_ERROR]: ${data}`);
+    });
+
+    pythonKernel.on('close', (code) => {
+        console.error(`[BRIDGE] Python Kernel exited with code ${code}. Restarting in 5s...`);
+        setTimeout(startKernel, 5000);
+    });
+}
+
+// Global Exception Handler
+process.on('uncaughtException', (err) => {
+    console.error(`[BRIDGE] Uncaught Exception: ${err.message}`);
 });
 
-pythonKernel.stderr.on('data', (data) => {
-    console.error(`[KERNEL_ERROR]: ${data}`);
-});
+startKernel();
 
-/**
- * 2. Iniciar el Servidor de Supervisión (Aurelius-Omni)
- * Mantiene la conexión activa con el Command Bridge de neón cyan.
- */
-const PORT = process.env.PORT || 3001;
 console.log(`>>> VITALIS-PRIME Bridge active on port ${PORT}`);
-console.log(`>>> Licensed to: ${process.env.AUTHOR_NAME}`);
+console.log(`>>> Licensed to: ${AUTHOR}`);
 
-// Exportar para uso del sistema
 module.exports = { pythonKernel, io };
