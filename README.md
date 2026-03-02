@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./Vitalis_Banner.png" alt="Vitalis-Prime v2.0 Logo" width="100%">
 
-  <h1>MERAKI SMILE DENTAL: Convergent Ecosystem (Powered by Vitalis-Prime)</h1>
+  <h1>VITALIS-PRIME-Convergent-Intelligence.: Convergent Ecosystem (Powered by Vitalis-Prime)</h1>
 
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT">
