@@ -19,13 +19,13 @@
 
 <br>
 
-**Meraki Smile Dental** is a comprehensive dental ecosystem designed for the Mexican market. It is powered by the **Vitalis-Prime** neuro-hybrid intelligence engine and Evolutionary Digital Twin framework, created by **Jorge H. Davalos Gonzalez**.
+**VITALIS-PRIME-Convergent-Intelligence** is a comprehensive dental ecosystem designed for the Mexican market. It is powered by the **Vitalis-Prime** neuro-hybrid intelligence engine and Evolutionary Digital Twin framework, created by **Jorge H. Davalos Gonzalez**.
 
 ---
 
-## 🏗️ Meraki Smile Ecosystem Architecture
+## 🏗️ VITALIS-PRIME-Convergent-IntelligenceEcosystem Architecture
 
-- **Meraki Platform Core:** Manages subscriptions, customizable widgets, and patient payment systems tailored for Mexican dental clinics.
+- **VITALIS-PRIME-Convergent-Intelligence Core:** Manages subscriptions, customizable widgets, and patient payment systems tailored for Mexican dental clinics.
 - **Vitalis-Prime Brain (`src/kernel/`):** The underlying intelligence engine. A Flask-driven hybrid synchronizer combining Random Forest (Memory) and PyTorch (Intuition) via a Dynamic Attention Module.
 - **Home Service Matchmaker:** Connects dentists with on-demand home service requests across the web using predictive intelligence.
 - **The Nervous System (`app.js`):** A Node.js bridge with auto-healing and real-time socket communication.
